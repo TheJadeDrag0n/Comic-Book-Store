@@ -7,8 +7,32 @@
 	<body class = "" bgcolor="#663366">
 	
 		<div class="row">		
+			
+			
+		% for comics in comics_list:
+		<div class="row">
 		</div>
-		<img src="/images/cosmic.jpeg">
+		<div class="col offset-s3 s6 row center teal lighten-2 container">
+					<h2 class="header white-text ">{{comics.name}}</h2>
+					<div class="card horizontal">
+						<div class="card-image z-depth-1">
+							<img src="/pictures/{{comics.comic_cover}}">
+						</div>
+					<div class="card-stacked">
+						<div class="card-content teal white-text">
+						<h5>Stock: {{comics.stock}}</h5>
+						</div>
+					</div>
+					</div>
+					<div class="row">
+					</div>
+		</div>
+		%end
+		
+		
+		</div>
+	
+	
 	</body>
 
 </html>

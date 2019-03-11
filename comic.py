@@ -7,19 +7,20 @@ class Comic:
 
     _ids = count(0)
 
-    def __init__(self, name, stock):
+    def __init__(self, name, stock, image):
 
         self.id = next(self._ids)
         self.name = name
         self.stock = stock
+        self.comic_cover = image
 
 
 
 #test data
 comics = [
-    Comic("Super Dude", 8),
-    Comic("Lizard Man", 12),
-    Comic("Water Woman", 3)
+    Comic("Super Dude", 8, "super_dude.jpg"),
+    Comic("Lizard Man", 12, "war.png"),
+    Comic("Water Woman", 3, "cosmic.jpg")
     ]
 
 
@@ -36,15 +37,16 @@ def index():
 @route("/test")
 @view("test")
 def test():
-
-    pass
-
+    
+    data = dict (comics_list=comics)
+    return data    
+    
 
 
 #pics
-@route('/images/<filename>')
-def server_static(filename):
-    return static_file(filename, root='/images')
+@route('/pictures/<filename>')
+def serve_picture(filename):
+    return static_file(filename, root='./images')
 
 
 
