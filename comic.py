@@ -34,9 +34,9 @@ def index():
     pass
 
 #test page
-@route("/test")
-@view("test")
-def test():
+@route("/comic")
+@view("comic")
+def comic():
     
     data = dict (comics_list=comics)
     return data    

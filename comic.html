@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	% include('shared/header.html')
+	% include('shared/navbar.html')
+
+
+	<body class = "" bgcolor="#663366">
+	
+		<div class="row">
+		</div>
+		<div class="row">		
+		<div>	
+		<div style="background-color:#5b7290;" class="col offset-s1 s10 z-depth-3 "> 
+
+		<div class="row">
+		
+		% for comics in comics_list:
+		<div class="row">
+		</div>
+		<div style="background-color:#b1bdcd" class="z-depth-1 offset-s2 col s8">
+					<h2 class="header white-text "><font face="Luckiest Guy">{{comics.name}}</font></h2>
+					<div class="card horizontal">
+						<div class="card-image z-depth-1">
+							<img src="/pictures/{{comics.comic_cover}}">
+						</div>
+					<div class="card-stacked">
+						<div  style="backgrond-color:#e7ebf0" class="card-content black-text">
+						<h5><font face="Luckiest Guy">Stock: {{comics.stock}}</font></h5>
+						</div>
+					</div>
+					</div>
+
+		</div>
+		%end
+		
+		
+		</div>
+		</div>
+	
+	</body>
+
+</html>
