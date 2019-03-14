@@ -7,7 +7,7 @@ class Comic:
 
     _ids = count(0)
 
-    def __init__(self, name, stock, image):
+    def __init__(self, image, name, stock):
 
         self.id = next(self._ids)
         self.name = name
@@ -18,10 +18,13 @@ class Comic:
 
 #test data
 comics = [
-    Comic("Super Dude", 8, "super_dude.jpg"),
-    Comic("Lizard Man", 12, "war.png"),
-    Comic("Water Woman", 3, "cosmic.jpg")
+    Comic("super_dude.jpg", "Super Dude", 8),
+    Comic( "war.png", "Lizard Man", 12),
+    Comic("cosmic.jpg", "Water Woman", 3)
     ]
+
+
+
 
 
 #Pages
@@ -33,7 +36,7 @@ def index():
 
     pass
 
-#test page
+#comic
 @route("/comic")
 @view("comic")
 def comic():
@@ -41,6 +44,14 @@ def comic():
     data = dict (comics_list=comics)
     return data    
     
+#test
+@route("/test")
+@view("test")
+def test():
+    
+    pass
+
+
 
 
 #pics
