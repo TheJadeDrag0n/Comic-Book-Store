@@ -43,6 +43,22 @@ def comic():
     
     data = dict (comics_list=comics)
     return data    
+
+
+@route("/comic-success/<comic_id>")
+@view("comic-success")
+def comic_success(comic_id):
+    
+    comic_id = int(comic_id)
+    found_comic = None
+    for comic in comics:
+        if comic.id == comic_id:
+            found_comic = comic
+    data = dict (comic = found_comic)
+    found_comic.stock = found_comic.stock - 1
+    return data
+
+
     
 #test
 @route("/test")

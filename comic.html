@@ -26,6 +26,14 @@
 					<div class="card-stacked">
 						<div  style="backgrond-color:#e7ebf0" class="card-content black-text">
 						<h5><font face="Luckiest Guy">Stock: {{comics.stock}}</font></h5>
+						<div class="row">
+						</div>						
+						%if comics.stock != 0 or comics.stock < 0:
+							<p><a href="/comic-success/{{comics.id}}"> Buy </a></p>
+						%else:
+							<p> Out of Stock </p>
+						%end
+						
 						</div>
 					</div>
 					</div>
