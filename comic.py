@@ -20,7 +20,8 @@ class Comic:
 comics = [
     Comic("super_dude.jpg", "Super Dude", 8),
     Comic( "war.png", "Lizard Man", 12),
-    Comic("cosmic.jpg", "Water Woman", 3)
+    Comic("cosmic.jpg", "Water Woman", 3),
+    Comic("a.png", "Test", 0)
     ]
 
 

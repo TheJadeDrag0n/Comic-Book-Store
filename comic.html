@@ -4,23 +4,26 @@
 	% include('shared/navbar.html')
 
 
-	<body class = "" bgcolor="#663366">
-	
+	<body style=" background-position: 50% 0% ; background-repeat: no-repeat ; background-size: cover;"  background="/pictures/cosmic.jpg" bgcolor="#663366" class = "" bgcolor="#663366">
+		
+		
+		<div class="">
+		
+		
 		<div class="row">
 		</div>
 		<div class="row">		
-		<div>	
-		<div style="background-color:#5b7290;" class="col offset-s1 s10 z-depth-3 "> 
+		<div style="background-color:#5b7290;opacity: .95" class=" col offset-s1 s10 z-depth-5 "> 
 
 		<div class="row">
 		
 		% for comics in comics_list:
 		<div class="row">
 		</div>
-		<div style="background-color:#b1bdcd" class="z-depth-1 offset-s2 col s8">
-					<h2 class="header white-text "><font face="Luckiest Guy">{{comics.name}}</font></h2>
+		<div style="background-color:#b1bdcd" class=" z-depth-5 offset-s2 col s8">
+					<h2 class="header white-text "><font color="#5b5c63" face="Luckiest Guy">{{comics.name}}</font></h2>
 					<div class="card horizontal">
-						<div class="card-image z-depth-1">
+						<div class="card-image z-depth-5">
 							<img style="width:280px; height:280px;	" src="/pictures/{{comics.comic_cover}}">
 						</div>
 					<div class="card-stacked">
@@ -29,9 +32,9 @@
 						<div class="row">
 						</div>						
 						%if comics.stock != 0 or comics.stock < 0:
-							<p><a href="/comic-success/{{comics.id}}"> Buy </a></p>
+							<p><a href="/comic-success/{{comics.id}}"><font face="Luckiest Guy"><u>Buy<font face="Luckiest Guy"><u></a></p>
 						%else:
-							<p> Out of Stock </p>
+							<p><font face="Luckiest Guy"><u> Out of Stock <font face="Luckiest Guy"><u> </p>
 						%end
 						
 						</div>
@@ -41,6 +44,10 @@
 		</div>
 		%end
 		
+		
+		</div>
+		</div>
+	
 		
 		</div>
 		</div>
