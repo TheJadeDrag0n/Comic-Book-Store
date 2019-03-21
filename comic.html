@@ -12,15 +12,16 @@
 		
 		<div class="row">
 		</div>
-		<div class="row">		
-		<div style="background-color:#5b7290;opacity: .95" class=" col offset-s1 s10 z-depth-5 "> 
+		<div class="row">
+
+		<div style= class="" col="offset-s1 s10 z-depth-5 "> 
 
 		<div class="row">
 		
 		% for comics in comics_list:
 		<div class="row">
 		</div>
-		<div style="background-color:#b1bdcd" class=" z-depth-5 offset-s2 col s8">
+		<div style="background-color:#b1bdcd;opacity:.95;" class=" z-depth-5 offset-s2 col s8">
 					<h2 class="header white-text "><font color="#5b5c63" face="Luckiest Guy">{{comics.name}}</font></h2>
 					<div class="card horizontal">
 						<div class="card-image z-depth-5">
@@ -28,13 +29,13 @@
 						</div>
 					<div class="card-stacked">
 						<div  style="backgrond-color:#e7ebf0" class="card-content black-text">
-						<h5><font face="Luckiest Guy">Stock: {{comics.stock}}</font></h5>
+						<h5><font size="15px" face="Luckiest Guy">Stock: {{comics.stock}}</font></h5>
 						<div class="row">
 						</div>						
 						%if comics.stock != 0 or comics.stock < 0:
-							<p><a href="/comic-success/{{comics.id}}"><font face="Luckiest Guy"><u>Buy<font face="Luckiest Guy"><u></a></p>
+							<p><a href="/comic-success/{{comics.id}}"><font size="6px" face="Luckiest Guy"><u>Buy</font><u></a></p>
 						%else:
-							<p><font face="Luckiest Guy"><u> Out of Stock <font face="Luckiest Guy"><u> </p>
+							<p><font size="12px" face="Luckiest Guy"><u> Out of Stock </font><u> </p>
 						%end
 						
 						</div>
@@ -54,4 +55,8 @@
 	
 	</body>
 
+
+	% include('shared/footer.html')
+	
+	
 </html>
