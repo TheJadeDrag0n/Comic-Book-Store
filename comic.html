@@ -21,7 +21,7 @@
 		% for comics in comics_list:
 		<div class="row">
 		</div>
-		<div style="background-color:#b1bdcd;opacity:.95;" class=" z-depth-5 offset-s2 col s8">
+		<div style="background-color:#b1bdcd;opacity:.91;" class=" z-depth-5 offset-s2 col s8">
 					<h2 class="header white-text "><font color="#5b5c63" face="Luckiest Guy">{{comics.name}}</font></h2>
 					<div class="card horizontal">
 						<div class="card-image z-depth-5">
@@ -32,10 +32,11 @@
 						<h5><font size="15px" face="Luckiest Guy">Stock: {{comics.stock}}</font></h5>
 						<div class="row">
 						</div>						
-						%if comics.stock != 0 or comics.stock < 0:
-							<p><a href="/comic-success/{{comics.id}}"><font size="6px" face="Luckiest Guy"><u>Buy</font><u></a></p>
-						%else:
+						%if comics.stock == 0 or comics.stock < 0:
 							<p><font size="12px" face="Luckiest Guy"><u> Out of Stock </font><u> </p>
+						%else:
+	
+							<p><a href="/comic-success/{{comics.id}}"><font size="6px" face="Luckiest Guy"><u>Buy</font><u></a></p>
 						%end
 						
 						</div>

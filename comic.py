@@ -21,7 +21,8 @@ comics = [
     Comic("super_dude.jpg", "Super Dude", 8),
     Comic( "war.png", "Lizard Man", 12),
     Comic("cosmic.jpg", "Water Woman", 3),
-    Comic("a.png", "Test", 0)
+    Comic("a.png", "Test_1", 0),
+    Comic("a.png", "Test_2", -2)
     ]
 
 
