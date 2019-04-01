@@ -12,19 +12,3 @@ Ver 1.2
   
 
 Ver 1.3
-
-
-
-
-
-
-
-
-
-
-    /\_/\
-   ((@v@))
-   ():::()
-    VV-VV
-Spanish motherf***er
-do you speak it
